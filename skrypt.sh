@@ -15,8 +15,14 @@ case $1 in
 		echo -e "Nazwa pliku: $plik \nNazwa skryptu: skrypt.sh \nData: $(date)" > $plik
 	done
 	;;
+	--init)
+	git clone https://github.com/DOzajec/lab4.git
+	export PATH=$PATH:$(pwd)/lab4
+	;;
 	--help)
 	echo "--date	Wyświetlenie dzisiejszej daty"
 	echo "--logs	Generuje automatycznie 100 plików log z nazwą pliku, skryptu który to wykonał i dzisiejszą datą"
 	echo "--logs jakas_liczba	generuje podaną ilość plików log"
+	echo "--init	Klonuje repozytorium i ustawia ścieżkę w zmiennej PATH"
+	;;
 esac
