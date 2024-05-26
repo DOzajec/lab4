@@ -35,5 +35,6 @@ case $1 in
 	echo "--logs	Generuje automatycznie 100 plików log z nazwą pliku, skryptu który to wykonał i dzisiejszą datą"
 	echo "--logs jakas_liczba	generuje podaną ilość plików log"
 	echo "--init	Klonuje repozytorium i ustawia ścieżkę w zmiennej PATH"
+	echo "--error [n], -e [n]  Tworzy n katalogów errorx z plikiem errorx.txt (domyślnie 100)"
 	;;
 esac
